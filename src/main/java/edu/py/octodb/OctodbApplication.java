@@ -56,10 +56,6 @@ public class OctodbApplication implements CommandLineRunner {
 
 		fileCrudOperation.findDataBase().subscribe(dataBase -> {
 			logger.info("La base de datos se cargo " + dataBase.getName());
-
-			dataBase.getCollections().forEach(collection -> {
-				logger.info("La collecion se cargo " + collection.getName());
-			});
 		});
 	}
 }
